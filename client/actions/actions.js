@@ -29,7 +29,7 @@ var fetchDataSelected = function(poster, title) {
 
 var fetchData = function(query) {
    return function(dispatch) {
-       var url = 'http://localhost:8080/api/?q=' + query ;
+       var url = 'api/?q=' + query ;
        return fetch(url).then(function(response) {
            if (response.status < 200 || response.status >= 300) {
                var error = new Error(response.statusText);
